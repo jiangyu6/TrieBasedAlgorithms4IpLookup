@@ -120,7 +120,7 @@ int lookup_ip(PctNode *root, uint32_t ip){
 		if(curr_node->skip != 0){
 			int skip = curr_node->skip;
 			int segment = curr_node->segment;
-			if((temp_ip & segment) == 0){
+			if((temp_ip & segment) != 0){
 				return curr_verdict;
 			}
 			temp_ip = temp_ip << skip;
