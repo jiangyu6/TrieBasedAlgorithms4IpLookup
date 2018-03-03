@@ -1,4 +1,5 @@
-# networkIpLookup
+# Trie Based Algorithms for IP Lookup
+
 0, Binary Trie
 1, Disjoint Prefix Binary Trie
 2, Path Compressed Trie
@@ -9,6 +10,13 @@
 6, Binary Search on Prefix Lengths
 
 
+0, Binary Trie
+Using recurssion to carry the current ancestor's verdict (not -1) to child nodes. 
+1), If neither of children is NULL, if the node is a prefix node, then update the current ancestor's verdict to be the node's verdict, and recurrsion on the children. 
+2), If both children are NULL, return. 
+3), If only one of them is NULL, then create a node with the current ancestor's verdict for replacing the NULL.  
+
+1, Disjoint Prefix Binary Trie
 
 
 1. This reference code provides the following functionality:
