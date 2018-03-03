@@ -110,9 +110,11 @@ void leaf_push(BtNode *node, int curr_ancestor_verdict){
 	if(node->left == NULL && node->right == NULL){
 		return;
 	}else if(node->left != NULL && node->right != NULL){
+		node->verdict = -1;
 		leaf_push(node->left, curr_ancestor_verdict);
 		leaf_push(node->right, curr_ancestor_verdict);
 	}else{
+		node->verdict = -1;
 		if(node->left == NULL){
 			if(curr_ancestor_verdict >= 0){
 				node->left = init_btnode();
